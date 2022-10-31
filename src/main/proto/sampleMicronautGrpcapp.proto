@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.az.mngrpcapp";
+option java_outer_classname = "SampleMicronautGrpcapp";
+option objc_class_prefix = "HLW";
+
+package com.az.mngrpcapp;
+
+service SampleMicronautGrpcappService {
+  rpc send (SampleMicronautGrpcappRequest) returns (SampleMicronautGrpcappReply) {}
+}
+
+message SampleMicronautGrpcappRequest {
+  string name = 1;
+}
+
+message SampleMicronautGrpcappReply {
+  string message = 1;
+}
